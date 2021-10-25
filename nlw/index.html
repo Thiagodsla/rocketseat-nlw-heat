@@ -6,6 +6,7 @@
 <head>
     <title>Thiago Azevedo - DoWhile 2021</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,38 +15,56 @@
 
 <body>
     <main>
-        <div class="container">
-            <div class="avatar">
-                <span><img src="./images/build.svg" alt="Selo rocketseat" /></span>
-                <img src="./images/avatar.jpg" alt="Foto pessoal" />
+        <div class="card">
+            <div class="container">
+                <div class="avatar">
+                    <span><img src="./images/build.svg" alt="Selo rocketseat" /></span>
+                    <img src="./images/avatar.jpg" alt="Foto pessoal" />
+                </div>
+                <h1 id="userName">Nome</h1>
+                <!-- <li class="github"> -->
+                <a href="https://github.com/" target="_blank">
+                    <img src="./images/github.svg" alt="Icone Github" /> Thiagodsla
+                </a>
+                <!-- </li> -->
+
+                <p>An student focused on start programming for web</p>
+
+                <ul id="socialLinks">
+                    <li class="youtube">
+                        <a href="https://www.youtube.com/" target="_bank"><img src="./images/youtube.svg" alt="Youtube" /></a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/" target="_bank"><img src="./images/instagram.svg" alt="Instagram" /></a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.linkedin.com/in/thiagodslima/" target="_bank"><img src="./images/linkedin.svg" alt="LinkedIn" /></a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="http://" target="_bank"><img src="./images/twitter.svg" alt="Twitter" /></a>
+                    </li> -->
+                </ul>
             </div>
-            <h1>Thiago Azevedo</h1>
-
-            <a href="https://instagram.com/thiagodsla ">
-                <img src="./images/github.svg" alt="Icone Github" /> Thiagodsla
-            </a>
-
-            <p>An student focused on start programming for web</p>
-
-            <ul>
-                <li>
-                    <a href="http://"><img src="./images/youtube.svg" alt="Youtube" target="_blank" /></a>
-                </li>
-
-                <li>
-                    <a href="http://"><img src="./images/instagram.svg" alt="Instagram" target="_blank" /></a>
-                </li>
-
-                <li>
-                    <a href="http://"><img src="./images/facebook.svg" alt="Facebook" target="_blank" /></a>
-                </li>
-
-                <li>
-                    <a href="http://"><img src="./images/twitter.svg" alt="Twitter" target="_blank" /></a>
-                </li>
-            </ul>
         </div>
     </main>
+    <script>
+        const linksSocialMidia = {
+            github: 'thiagodsla',
+            youtube: 'channel/UCrCt8IXmYlgrUmBBXN5MBow',
+            instagram: 'thiagodsla'
+        };
+
+        function changeSocialMediaLinks() {
+            for (let li of socialLinks.children) {
+                const social = li.getAttribute('class');
+                li.children[0].href = `https://www.${social}.com/${linksSocialMidia[social]}`;
+            }
+        }
+
+        changeSocialMediaLinks();
+    </script>
 </body>
 
 </html>
+
+<!-- 'https://www.instagram.com/thiagodsla/' 'https://www.youtube.com/channel/UCrCt8IXmYlgrUmBBXN5MBow' -->
