@@ -1,7 +1,8 @@
 const linksSocialMidia = {
     github: 'thiagodsla',
     youtube: 'channel/UCrCt8IXmYlgrUmBBXN5MBow',
-    instagram: 'thiagodsla'
+    instagram: 'thiagodsla',
+    linkedin: 'in/thiagodslima/'
 };
 
 function changeSocialMediaLinks() {
